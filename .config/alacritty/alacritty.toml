@@ -1,0 +1,78 @@
+[window]
+padding = { x = 15, y = 15 } # Відступи від країв (дихання для тексту)
+decorations = "Buttonless"   # Прибирає верхню смугу заголовка (або "None")
+opacity = 0.90               # Легка прозорість (ефектно виглядає)
+blur = true                  # Розмиття фону (тільки macOS)
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 14.0
+
+[colors]
+# Catppuccin Mocha theme for Alacritty
+
+[colors.primary]
+background = "#1E1E2E" # Темно-фіолетовий фон
+foreground = "#CDD6F4" # Основний текст
+
+[colors.cursor]
+text = "#1E1E2E"
+cursor = "#F5E0DC"
+
+[colors.vi_mode_cursor]
+text = "#1E1E2E"
+cursor = "#B4BEFE"
+
+[colors.search.matches]
+foreground = "#1E1E2E"
+background = "#A6E3A1"
+
+[colors.search.focused_match]
+foreground = "#1E1E2E"
+background = "#A6E3A1"
+
+[colors.footer_bar]
+foreground = "#1E1E2E"
+background = "#A6E3A1"
+
+[colors.hints.start]
+foreground = "#1E1E2E"
+background = "#F9E2AF"
+
+[colors.hints.end]
+foreground = "#1E1E2E"
+background = "#A6E3A1"
+
+[colors.selection]
+text = "#1E1E2E"
+background = "#F5E0DC"
+
+[colors.normal]
+black   = "#45475A"
+red     = "#F38BA8"
+green   = "#A6E3A1"
+yellow  = "#F9E2AF"
+blue    = "#89B4FA"
+magenta = "#F5C2E7"
+cyan    = "#94E2D5"
+white   = "#BAC2DE"
+
+[colors.bright]
+black   = "#585B70"
+red     = "#F38BA8"
+green   = "#A6E3A1"
+yellow  = "#F9E2AF"
+blue    = "#89B4FA"
+magenta = "#F5C2E7"
+cyan    = "#94E2D5"
+white   = "#A6ADC8"
+
+[colors.dim]
+black   = "#45475A"
+red     = "#F38BA8"
+green   = "#A6E3A1"
+yellow  = "#F9E2AF"
+blue    = "#89B4FA"
+magenta = "#F5C2E7"
+cyan    = "#94E2D5"
+white   = "#BAC2DE"
