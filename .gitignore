@@ -18,3 +18,7 @@ ghostty.log
 # --- Інше ---
 npm-debug.log
 node_modules/
+# --- Zed Trash ---
+*.mdb
+*.lock
+prompts-library-db*
