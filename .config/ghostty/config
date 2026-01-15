@@ -1,0 +1,34 @@
+# --- THEME (Catppuccin Mocha) ---
+# Ghostty має вбудовану підтримку цієї теми, нічого качати не треба
+theme = catppuccin-mocha
+
+# --- FONT ---
+font-family = "Comic Code Ligatures"
+font-size = 14
+# Лігатури (з'єднання символів, як =>)
+font-feature = calt
+font-feature = liga
+
+# --- WINDOW (Minimalism) ---
+# Прозорість і розмиття (Blur - це кілер-фіча Ghostty на macOS)
+background-opacity = 0.9
+background-blur-radius = 20
+
+# Прибираємо заголовок вікна (як ми робили в Alacritty)
+window-decoration = false
+
+# Відступи тексту, щоб він не прилипав до країв
+window-padding-x = 15
+window-padding-y = 15
+window-padding-balance = true
+
+# --- BEHAVIOR ---
+# Ховати мишку, коли починаєте писати
+mouse-hide-while-typing = true
+
+# Копіювання/вставка звичними клавішами (хоча Cmd+C/V працює з коробки)
+keybind = global:cmd+c=copy_to_clipboard
+keybind = global:cmd+v=paste_from_clipboard
+
+# Швидке перезавантаження конфігу (Cmd + Shift + ,)
+keybind = global:cmd+shift+comma=reload_config
