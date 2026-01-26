@@ -1,0 +1,86 @@
+# ~/.aerospace.toml
+
+# Основні налаштування
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# Відступи (Gaps) - щоб було красиво
+[gaps]
+inner.horizontal = 10
+inner.vertical   = 10
+outer.left       = 10
+outer.bottom     = 10
+outer.top        = 10
+outer.right      = 10
+
+# === ШОРТКАТИ ===
+[mode.main.binding]
+
+# 1. Запуск терміналу (Option + Shift + Enter)
+alt-shift-enter = 'exec-and-forget open -n /Applications/Ghostty.app'
+
+# 2. FULLSCREEN (Розгорнути/Згорнути) - те, що ви просили
+# Натисніть Option + Shift + F, щоб вікно стало на весь екран.
+# Натисніть ще раз, щоб повернути його назад.
+alt-shift-f = 'fullscreen'
+
+# 3. Навігація між вікнами (Option + Shift + H/J/K/L)
+# Працює всюди, навіть в Termius
+alt-shift-h = 'focus left'
+alt-shift-j = 'focus down'
+alt-shift-k = 'focus up'
+alt-shift-l = 'focus right'
+
+# 4. Переміщення самих вікон (Option + Command + H/J/K/L)
+# Додав Command, щоб випадково не пересунути вікно, коли хочете просто переключити фокус
+alt-cmd-h = 'move left'
+alt-cmd-j = 'move down'
+alt-cmd-k = 'move up'
+alt-cmd-l = 'move right'
+
+# 5. Робочі столи (Option + Shift + 1...4)
+alt-shift-1 = 'workspace 1'
+alt-shift-2 = 'workspace 2'
+alt-shift-3 = 'workspace 3'
+alt-shift-4 = 'workspace 4'
+alt-shift-5 = 'workspace 5'
+
+# 6. Перекинути вікно на інший стіл (Option + Command + 1...4)
+alt-cmd-1 = 'move-node-to-workspace 1'
+alt-cmd-2 = 'move-node-to-workspace 2'
+alt-cmd-3 = 'move-node-to-workspace 3'
+alt-cmd-4 = 'move-node-to-workspace 4'
+alt-cmd-5 = 'move-node-to-workspace 5'
+
+# 7. Зміна розміру вікон (Option + Shift + -/=)
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
+
+# Перезавантажити конфіг (якщо щось змінили)
+alt-shift-r = 'reload-config'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = ['layout floating']
+
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Microsoft Edge'
+if.window-title-regex-substring = 'Enhance'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Microsoft Edge'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Termius'
+run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = ['move-node-to-workspace 5']
